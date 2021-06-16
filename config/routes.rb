@@ -17,10 +17,8 @@ Rails.application.routes.draw do
   # post '/restaurants', to: 'restaurants#create'
 
   resources :restaurants, only: [:new, :index, :show, :create] do
-    member do
-      get :reviews
+    resources :reviews, only: [:new, :create]
     end
-  end
 end
 
 # nest resources
