@@ -1,5 +1,5 @@
 <h1>List of restaurants</h1>
-<div class="btn btn-primary"><%= link_to "Add new restaurant", new_restaurant_path %></div>
+<%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary"%>
 <hr>
 <% @restaurants.each do |restaurant| %>
   <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
@@ -7,3 +7,5 @@
   <p><%= restaurant.address %></p>
   <hr>
 <% end %>
+
+
